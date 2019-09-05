@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Steven's Site</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="box-1">
+			<h1>This is our Website</h1>
+			<p>Welcome</p>
+		</div>
+
+		<div class="box-2">
+			<h1>This is Steven</h1>
+			<p>If you would like a webpage / site you can reach me at (321) 574-8147‬. </p>
+			<img src="ME.jpg" width="800" >
+			
+			<a class="button" onclick="fn1()" href="">Read More</a>
+			 
+			<script>
+			function fn1(){
+			alert("He's actually a good guy")
+			}
+			</script>
+		</div>
+
+
+		
+
+
+<h2> Simple Data manipulation and file output</h2>
+		<form class="my-form">
+			<div class="form-group">
+				<label>Name: </label>
+				<input id="text1" type="text" name="name">
+			</div>
+			<div class="form-group">
+				<label>Email: </label>
+				<input id="text2" type="text" name="email">
+			</div>
+			<div class="form-group">
+				<label>Message: </label>
+				<textarea id="text3" name="message"></textarea>					
+		</div>
+			<input class="button" type="submit" value="Download in text file" name="" onclick="sub();">			
+		</form>
+		
+		<div class="categories">
+			<h2>Webpages</h2>
+			<ul>
+				<li><a href="https://stevenmunich.github.io/Officer-Dude/">Trailer: Officer Dude</a></li>
+				<li><a href="https://stevenmunich.github.io/Badge/">Get an Official Police Badge</a></li>
+				<li><a onclick="fn1();">Coming soon</a></li>
+				<li><a href="#">Category 4</a></li>
+				<li><a href="test.html">Category 5</a></li>
+			</ul>
+		</div>
+		
+		<script>
+			function sub1(){
+			var name1 = document.getElementById("text1").value;
+			var email1 = document.getElementById("text2").value;
+			var msg1 = document.getElementById("text3").value;
+			alert("Submitted!")
+
+
+			/*
+			* Save a text file locally with a filename by triggering a download
+			var Name1 = document.getElementById(Text1);
+			var Email1 = document.getElementById(Text2);
+			*/
+
+			var text = "Name: " + name1 + "\n" + "Email: " + email1 + "\n" + "Your Message: " + msg1,
+				blob = new Blob([text], { type: 'text/plain' }),
+				anchor = document.createElement('a');
+
+			anchor.download = "info.txt";
+			anchor.href = (window.webkitURL || window.URL).createObjectURL(blob);
+			anchor.dataset.downloadurl = ['text/plain', anchor.download, anchor.href].join(':');
+			anchor.click();
+
+			}
+		</script>
+
+
+
+</body>
+</html>
