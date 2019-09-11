@@ -14,54 +14,12 @@
 
 		<div class="box-2">
 			<h1>Welcome to the Party!</h1>
-			<p>Content will be updated on a regular basis,</p>
+			<p style="color:blue;">More content is on the way!</p>
 			
 			
-			
-			
-			
-			
-			
-			
-		
 
-
-			<script>
-			function fn1(){
-			//alert("He's actually a good guy")
-			}
-		<a href= '#name1' + "Hellow" download="hello.txt">Download On Text (static)</a>
-
-			
-			$("a#programatically").click(function(){
-    var now = new Date().toString();
-    this.href = "data:text/plain;charset=UTF-8,"  + encodeURIComponent(now);
-});
-
-			
-			</script>
 		</div>
 
-<img src="ME.jpg" >
-		
-
-
-<h2> Simple Data manipulation and file output</h2>
-		<form class="my-form">
-			<div class="form-group">
-				<label>Name: </label>
-				<input id="text1" type="text" name="name">
-			</div>
-			<div class="form-group">
-				<label>Email: </label>
-				<input id="text2" type="text" name="email">
-			</div>
-			<div class="form-group">
-				<label>Message: </label>
-				<textarea id="text3" name="message"></textarea>					
-		</div>
-				<a href="data:text/plain;charset=UTF-8,Hello%20World!" download="hello.txt">Download</a> 		
-		</form>
 		
 		<div class="categories">
 			<h2>Webpages</h2>
@@ -74,31 +32,7 @@
 			</ul>
 		</div>
 		
-		<script>
-			function sub1(){
-			var name1 = document.getElementById("text1").value;
-			var email1 = document.getElementById("text2").value;
-			var msg1 = document.getElementById("text3").value;
-			alert("Submitted!")
-
-
-			/*
-			* Save a text file locally with a filename by triggering a download
-			var Name1 = document.getElementById(Text1);
-			var Email1 = document.getElementById(Text2);
-			*/
-
-			var text = "Name: " + name1 + "\n" + "Email: " + email1 + "\n" + "Your Message: " + msg1,
-				blob = new Blob([text], { type: 'text/plain' }),
-				anchor = document.createElement('a');
-
-			anchor.download = "info.txt";
-			anchor.href = (window.webkitURL || window.URL).createObjectURL(blob);
-			anchor.dataset.downloadurl = ['text/plain', anchor.download, anchor.href].join(':');
-			anchor.click();
-
-			}
-		</script>
+	
 
 
 
