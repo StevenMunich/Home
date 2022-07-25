@@ -31,7 +31,9 @@ nav ul{ /*list*/
 }
 nav li{ /*list items can use "float: left" to make them side by side or code below*/
 	display: inline-block; /* makes list side by side */
-	
+	margin-left: 25px;
+	marin-right: 5px;
+	border-style: ridge;
 }
 
 
