@@ -9,7 +9,7 @@ header{
 background:teal;
 }
 
-header::after{ /* Fixes error from logo float right and nav float left */
+header::after{ /* Fixes error from logo float left and nav float right */
 content: '';
 display: table;
 clear: both;
@@ -31,6 +31,10 @@ nav ul{ /*list*/
 }
 nav li{ /*list items can use "float: left" to make them side by side or code below*/
 	display: inline-block;
+	margin-left: 70px; /* space between each item. Can use Margin: 0.70px*/
+	padding-top: 35px; /* space from top of container */
+	border-style: ridge; /*thin line border */
+	border-color: black;
 }
 
 
