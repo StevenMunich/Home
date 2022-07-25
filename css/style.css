@@ -9,6 +9,12 @@ header{
 background:teal;
 }
 
+header::aafter{ /* Fixes error from logo float right and nav float left */
+content: '';
+display: table;
+clear: both;
+}
+
 logo{
 float: left; /* logo and nav floating in opposite directions will cause an error */
 	width:200px;
