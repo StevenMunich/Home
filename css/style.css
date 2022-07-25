@@ -30,7 +30,7 @@ nav ul{ /*list*/
 	list-style: none;
 }
 nav li{ /*list items can use "float: left" to make them side by side or code below*/
-	display: inline-block;
+	display: inline-block; /* makes list side by side */
 	margin-left: 70px; /* space between each item. Can use Margin: 0.70px*/
 	/* padding-top: 35px; space from top of container */
 	border-style: ridge; /*thin line border */
