@@ -20,9 +20,19 @@ float: left; /* logo and nav floating in opposite directions will cause an error
 	width:200px;
 	height:125px;
 }
+
 nav{
 float: right;
 }
+nav ul{ /*list*/
+	margin 0;
+	padding: 0;
+	list-style: none;
+}
+nav li{ /*list items can use "float: left" to make them side by side or code below*/
+	display: inline-block;
+}
+
 
 body{
 	background-image: url("ocb.gif");
