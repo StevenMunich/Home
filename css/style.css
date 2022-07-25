@@ -9,6 +9,15 @@ header{
 background:teal;
 }
 
+logo{
+float: left; /* logo and nav floating in opposite directions will cause an error */
+	width:200px;
+	height:125px;
+}
+nav{
+float:right;
+}
+
 body{
 	background-image: url("ocb.gif");
 	 background-repeat: no-repeat;
