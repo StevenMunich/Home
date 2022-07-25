@@ -15,7 +15,7 @@ float: left; /* logo and nav floating in opposite directions will cause an error
 	height:125px;
 }
 nav{
-float:right;
+float: right;
 }
 
 body{
