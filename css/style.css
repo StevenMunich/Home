@@ -232,3 +232,14 @@ color : red;
 	top:100px;
 	left:200px;
 }
+}
+
+@media only screen and (max-width: 10810px){
+	*{color: green;}
+}
+@media only screen and (min-width: 720px){
+	*{color: red;} /* runs on pc*/
+}
+@media only screen and (max-width: 1080px){
+	*{color: yellow;}
+}
