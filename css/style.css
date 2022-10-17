@@ -35,6 +35,7 @@ nav li{ /*list items can use "float: left" to make them side by side or code bel
 	marin-right: 5px;
 	border-style: ridge;
 	padding: 5px;
+	position: fixed; /*added 10/17/2022 at 6:00 */
 }
 
 
