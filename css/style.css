@@ -117,6 +117,9 @@ a:visited{
 	marin-right: 3px; /* was 5 */
 	border-style: ridge;
 	padding: 5px;
-}
+	}
+	header{
+	background:purple;
+	}
 	
 }
