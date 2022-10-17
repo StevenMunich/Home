@@ -96,3 +96,11 @@ a:visited{
 .clr{
 	clear:both;
 }
+/* puts donate button at lower left corner */
+#lowerleft
+{
+	margin-bottom: 1px;
+	margin-left : 1px;
+	position: fixed;
+	bottom: 0;
+}
