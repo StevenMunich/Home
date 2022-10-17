@@ -117,6 +117,7 @@ a:visited{
 	margin-right: 3px; /* was 5 */
 	border-style: ridge;
 	padding: 5px;
+	font-size:24px;
 	}
 	header{
 	background:purple;
