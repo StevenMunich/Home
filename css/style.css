@@ -108,4 +108,15 @@ a:visited{
 	height: 200;
 }
 
+/* to fix nav bar on mobile */
+@media only screen and (max-width: 768px ) {
 
+	nav li{ /*list items can use "float: left" to make them side by side or code below*/
+	display: inline-block; /* makes list side by side */
+	margin-left: 10px; /* was 25 */
+	marin-right: 3px; /* was 5 */
+	border-style: ridge;
+	padding: 5px;
+}
+	
+}
