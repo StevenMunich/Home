@@ -40,7 +40,7 @@ nav li{ /*list items can use "float: left" to make them side by side or code bel
 
 
 body{
-	background-image: url("spc.gif");
+	background-image: url("spc.gif") ;
 	
 	
 	 background-repeat: no-repeat;
