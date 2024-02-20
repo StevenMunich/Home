@@ -20,6 +20,21 @@ float: left; /* logo and nav floating in opposite directions will cause an error
 	width:200px;
 	height:125px;
 }
+#cover{
+    position: relative;
+    margin: 0 auto;
+}
+#cover img{
+    position: absolute;
+    left: 0;
+    -webkit-transition: opacity 4s ease-in-out;
+    transition: opacity 4s ease-in-out;
+    width: 200px; /*width and height must be same or it wont work*/
+    height: 125px;
+}
+#cover img.top: hover{
+    opacity: 0;
+}
 
 nav{
 float: right;
