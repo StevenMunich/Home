@@ -118,6 +118,23 @@ a:visited{
 	width: 400;
 	height: 200;
 }
+/*doe Satty*/
+#sattMan{
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  position: relative;
+  animation: Encircle 3s 2;
+  animation-direction: alternate;
+}
+
+@keyframes Encircle {
+  0%   {background:  left: 0px; top: 0px;}
+  25%  {background:  left: 200px; top: 0px;}
+  50%  {background:  left: 200px; top: 200px;}
+  75%  {background:  left: 0px; top: 200px;}
+  100% {background:  left: 0px; top: 0px;}
+}
 
 /* to fix nav bar on mobile */
 @media only screen and (max-width: 1080px) {
