@@ -1,0 +1,138 @@
+  header
+  {
+    background:rgb(56, 243, 218);
+  }
+  
+  header::after
+  { /* Fixes error from logo float left and nav float right */
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  logo
+  {
+    float: left; /* logo and nav floating in opposite directions will cause an error */
+    width:200px;
+    height:125px;
+  }
+  
+  nav
+  {
+  float: right;
+  }
+  nav ul
+  { /*list*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav li
+  { /*list items can use "float: left" to make them side by side or code below*/
+    display: inline-block; /* makes list side by side */
+    margin-left: 25px;
+    margin-right: 5px; /* edited / fixed on 6/19/2024 */
+    border-style: ridge;
+    padding: 5px;
+  }
+  
+  body
+  {
+    background-image: url("skyCity.jpg");
+    background-repeat: no-repeat;
+    background-size: stretch;
+    background-color: lightblue;
+    color:#ffffff;
+  
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
+    font-weight:normal;
+    /* Same as above */
+    font: normal 16px Arial, Helvetica, sans-serif;
+  
+    line-height:1.6em;
+    margin:0;
+  }
+  
+  #center{
+    margin: auto;
+    width: 50%;
+    /* border: 3px solid green; */
+    padding: 10px;
+    right: 160px;
+  }
+  
+  ul{
+    list-style-type: none;
+  }
+  
+  a{
+    text-decoration: none;
+    color: rgb(22, 4, 155);
+  }
+  
+  a:hover{
+    color:rgb(87, 219, 217);
+  }
+  
+  a:active{
+    color: rgb(87, 219, 217);
+  }
+  
+  a:visited{
+    color: rgb(87, 219, 217);
+  }
+  
+  .container{
+    width:80%;
+    margin:0 auto;
+  }
+  
+  .button{
+    background-color:rgb(0,0, 255);
+    color:rgb(221, 221, 221);
+    padding:10px 15px;
+    border:none;
+  }
+  
+  .button:hover{
+    background:rgb(17, 208, 49);
+    color : #fff;
+  }
+  
+  .clr{
+    clear:both;
+  }
+  /* puts donate button at lower left corner */
+  #lowerleft
+  {
+    margin-bottom: 1px;
+    margin-left : 1px;
+    position: fixed;
+    bottom: 0;
+    
+    width: 400;
+    height: 200;
+  }
+  
+  /* to fix nav bar on mobile */
+  @media only screen and (max-width: 1080px) {
+  
+    nav li{ /*list items can use "float: left" to make them side by side or code below*/
+    display: inline-block; /* makes list side by side */
+    margin-left: 10px; /* was 25 */
+    margin-right: 3px; /* was 5 */
+    border-style: ridge;
+    padding: 5px;
+    font-size:24px;
+    }
+    header{
+    background:rgb(73, 200, 255);
+    }
+    
+  }
+  @media only screen and (max-width: 1080px) and (orientation: landscape){
+      #lowerleft{
+      visibility: hidden;
+      }
+  }
