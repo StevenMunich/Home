@@ -119,11 +119,9 @@ header{
     margin-right: 3px; /* was 5 */
     border-style: ridge;
     padding: 5px;
-    font-size:24px;
+    font-size:36px;
     }
-    header{
-    background:purple;
-    }
+    
     background-size: cover;
     
   }
