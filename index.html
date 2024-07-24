@@ -18,7 +18,24 @@
 <body style="color: white">
 	
 	<div class="container">
+		<span>
 		<img src="images/ufo.gif" alt="SpaceShip" class="logo" style="width:200px; height:125px;">
+		<ul>	
+		<li>
+			<select autocomplete="off" onchange="getTheme()" id="select">
+			        <option>Lava</option>
+			        <option selected>Space</option>
+			        <option>Winter</option>
+			        <option>Ocean</option>
+			        <option>Garden</option>
+			        <option>Moon</option>
+			        <option>MonkeyTron</option>
+			</select>
+		</li>
+		</ul>
+		</span>
+
+		
 		<nav>
 		<ul>	
 			<li><a href="https://stevenmunich.github.io/BasicMath/"/>Basic Math</a></li>				
@@ -33,23 +50,9 @@
 	
 
 	
-	<ul>	
-		 
-		<li>
-			<select autocomplete="off" onchange="getTheme()" id="select">
-			        <option>Lava</option>
-			        <option selected>Space</option>
-			        <option>Winter</option>
-			        <option>Ocean</option>
-			        <option>Garden</option>
-			        <option>Moon</option>
-			        <option>MonkeyTron</option>
-			</select>
-		</li>
-	</ul>
+	
 
 	<div id="center">
-
 		<div id="game-area" tabindex="0">
 			<H1>No News</H1>
 			<img id="sattyman" src="satty.png" width="200px"; height="175px"; background-color= "transparent">
