@@ -114,7 +114,7 @@ header{
   @media only screen and (max-width: 1080px) {
   
     nav li{ /*list items can use "float: left" to make them side by side or code below*/
-    display: inline-block; /* makes list side by side */
+    display: block; /* makes list side by side */
     margin-left: 10px; /* was 25 */
     margin-right: 3px; /* was 5 */
     border-style: ridge;
@@ -124,6 +124,7 @@ header{
     header{
     background:purple;
     }
+    background-size: cover;
     
   }
   @media only screen and (max-width: 1080px) and (orientation: landscape){
