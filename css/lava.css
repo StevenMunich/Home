@@ -112,7 +112,10 @@ header{
   
   /* to fix nav bar on mobile */
   @media only screen and (max-width: 1080px) {
-  
+
+    nav{
+      float: none;
+    }
     nav li{ /*list items can use "float: left" to make them side by side or code below*/
     display: block; /* makes list side by side */
     margin-left: 10px; /* was 25 */
@@ -121,6 +124,7 @@ header{
     padding: 5px;
     font-size:36px;
     }
+    
     
     background-size: cover;
     
