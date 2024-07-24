@@ -36,6 +36,7 @@ header{
     background-image: url("lava.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     background-color: rgb(255, 0, 0);
     color:#ffffff;
   
@@ -119,10 +120,12 @@ header{
     nav li{ /*list items can use "float: left" to make them side by side or code below*/
     display: block; /* makes list side by side */
     margin-left: 10px; /* was 25 */
-    margin-right: 3px; /* was 5 */
+    margin-right: 10px; /* was 5 */
     border-style: ridge;
+    border-size: 7px;
     padding: 5px;
-    font-size:36px;
+    font-size:48px;
+    text-align: center;
     }
     
     
