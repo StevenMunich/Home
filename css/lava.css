@@ -68,7 +68,7 @@ header{
   }
   
   a:hover{
-    color:rgb(69, 11, 186);
+    color: blue;
   }
   
   a:active{
@@ -76,7 +76,7 @@ header{
   }
   
   a:visited{
-    color: rgb(69, 11, 186)
+    color: yellow;
   }
   
   .container{
