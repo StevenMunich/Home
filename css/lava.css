@@ -121,11 +121,14 @@ header{
     display: block; /* makes list side by side */
     margin-left: 10px; /* was 25 */
     margin-right: 10px; /* was 5 */
+    
     border-style: ridge;
-    border-size: 7px;
+    
     padding: 5px;
     font-size:48px;
     text-align: center;
+    margin-bottom: 20px;
+    border-size: 30px;
     }
     
     
