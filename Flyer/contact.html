@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IT Services — PC Repair, Networks, Dev & Automation</title>
+  <style>
+    :root{
+      --accent:#00b4d8;
+      --accent-2:#023e8a;
+      --muted:#e9f5fb;
+      --glass: rgba(255,255,255,0.08);
+      --card-bg: rgba(0,0,0,0.55);
+      --text: #ffffff;
+      /* Replace 'background.jpg' with your background image filename or URL */
+      --background-image: url('background.jpg');
+      --max-width: 1100px;
+      --radius: 12px;
+      --pad: 20px;
+    }
+
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+    body{
+      color:var(--text);
+      background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), var(--background-image);
+      background-size: cover;
+      background-position: center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      box-sizing:border-box;
+
+
+
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;      /* Other options: 1. Contain(show the whole image) 2. cover(fills)*/
+  background-color: #000;       /* fill any letterbox space */
+  min-height: 100vh;
+
+
+
+
+    }
+
+    .flyer{
+      width:100%;
+      max-width:var(--max-width);
+      background: linear-gradient(180deg, rgba(0,0,0,0.40), rgba(0,0,0,0.60));
+      border-radius:var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:0;
+      min-height:520px;
+      
+    }
+
+
+    a, a:link, a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Hover / focus / active states */
+a:hover, a:focus, a:active {
+  color: #e6f7ff;
+  text-decoration: underline;
+  outline: none;
+}
+
+
+    /* Responsive stack */
+    @media (max-width:880px){
+      .flyer{grid-template-columns: 1fr; min-height:720px;}
+    }
+
+    .left{
+      padding:calc(var(--pad) * 1.2);
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .logo{
+      width:68px;height:68px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:#fff;
+      box-shadow:0 6px 18px rgba(2,46,75,0.45);
+    }
+    h1{
+      margin:0;font-size:28px;line-height:1.05;
+      letter-spacing:-0.4px;
+    }
+    p.lead{
+      margin:0;color:#00b4d8;font-size:15px;max-width:70ch;  font-weight: bold;
+
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:12px;
+      margin-top:6px;
+    }
+    @media (max-width:600px){ .services{grid-template-columns: 1fr;} }
+
+    .service{
+      background:var(--card-bg);
+      padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.05);
+      display:flex;flex-direction:column;gap:8px;
+    }
+    .service h3{margin:0;font-size:15px;color:var(--accent);font-weight:700}
+    .service p{margin:0;color:var(--muted);font-size:13px;line-height:1.3}
+
+    .features{
+      margin-top:8px;display:flex;flex-wrap:wrap;gap:8px;
+    }
+    .chip{
+      background:rgba(255,255,255,0.06);padding:8px 12px;border-radius:999px;font-size:13px;
+      border:1px solid rgba(255,255,255,0.03)
+    }
+
+    .cta{
+      margin-top:auto;display:flex;gap:12px;align-items:center;
+    }
+    .btn{
+      background:var(--accent);
+      color:#01203a;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;
+      box-shadow: 0 8px 18px rgba(3,97,133,0.25);
+    }
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--text);padding:10px 16px}
+
+    .right{
+      padding:var(--pad);background:linear-gradient(180deg, rgba(2,46,75,0.45), rgba(2,46,75,0.35));
+      display:flex;flex-direction:column;gap:14px;align-items:stretch;justify-content:center;
+      min-width:320px;
+    }
+
+    .contact-card{
+      background:var(--glass);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);
+      display:flex;flex-direction:column;gap:10px;
+    }
+
+    .contact-row{display:flex;gap:10px;align-items:center;justify-content:space-between}
+    .contact-label{font-size:12px;color:var(--muted)}
+    .contact-value{font-weight:700;font-size:15px;color:#fff}
+
+    .contact-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+    .action-link{background:rgba(255,255,255,0.06);padding:10px 12px;border-radius:8px;color:var(--text);text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,0.04)}
+    .small{font-size:12px;color:var(--muted)}
+
+    footer{font-size:12px;color:var(--muted);margin-top:8px;text-align:center}
+
+    /* Accessibility focus */
+    a:focus{outline:3px solid rgba(0,180,216,0.25);outline-offset:2px}
+  </style>
+
+
+</head>
+<body>
+  <div class="flyer" role="region" aria-label="IT services flyer">
+    <div class="left">
+      <div class="brand">
+        <div class="logo">IT</div>
+        <div>
+          <h1>EdgeWave IT Services</h1>
+          <p class="lead">Fast PC repair, secure networking(IoT, Firewalls, IDS, ACL), custom websites & software , IT automation, and hardware input mapping(to OS) and</p>
+        </div>
+      </div>
+
+      <div class="services" aria-hidden="false">
+        <div class="service">
+          <h3>PC Repair & Support</h3>
+          <p>Diagnostics, hardware replacement, OS tuning, malware removal, backups, and remote support.</p>
+        </div>
+        <div class="service">
+          <h3>Websites & Web Apps</h3>
+          <p>Responsive sites, intranet web applications, captive portal design, and MIS(ERP, CRM, SCM).</p>
+          <!--Business has various software for every function. Inventory software, schedualing software(EZPZ), payment gateways, etcs-->
+        </div>
+        <div class="service">
+          <h3>Networking & IoT</h3>
+          <p>Captive portals, secure intranet apps, IoT integrations, VLAN/Wi‑Fi setup, and monitoring.</p>
+        </div>
+        <div class="service">
+          <h3>Software Automation & Development</h3>
+          <p>Custom automation, APIs, backend services, controller input mapping, and desktop tools.</p>
+        </div>
+      </div>
+
+      <div class="features" aria-hidden="true">
+        <div class="chip">SMTP Email Delivery</div>
+        <div class="chip">SMS/Text Integration</div>
+        <div class="chip">Hardware Input Mapping</div>
+        <div class="chip"><a href="http://www.stevenmunich.com">Websites and intranet applications</a></div>
+        <div class="chip">Remote & Onsite</div>
+      </div>
+
+      <div class="cta">
+        <a class="btn" href="mailto:stevenmunich777@gmail.com?subject=IT%20Services%20Inquiry">Contact Us by Email</a>
+        <a class="btn secondary" href="tel:+4077175673">Call +1 (407) 717-5673</a>
+      </div>
+    </div>
+
+    <aside class="right" aria-label="Contact and quick info">
+      <div class="contact-card">
+        <div class="contact-row">
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">stevenmunich777@example.com</div>
+          </div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">+1 (407) 717-5673</div>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div>
+            <div class="contact-label">SMS</div>
+            <div class="contact-value">Text: +1 (407) 717-5673</div>
+          </div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Melbourne, FL</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="contact-label">Quick contacts</div>
+          <div class="contact-actions">
+            <a class="action-link" href="mailto:stevenmunich777@example.com">Email</a>
+            <a class="action-link" href="sms:+4077175673">SMS</a>
+            <a class="action-link" href="tel:+4077175673">Call</a>
+            <a class="action-link" href="#services">Services</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="contact-label">Available integration examples</div>
+          <div class="small">SMTP for notifications; SMS gateway for alerts; REST APIs for automation; controller HID mapping for custom hardware input.</div>
+        </div>
+      </div>
+
+      <div class="contact-card" style="margin-top:12px">
+        <div class="contact-label">Hours</div>
+        <div class="contact-value">Mon–Fri 9:00am–5:00pm EST</div>
+        <div style="height:8px"></div>
+        <div class="small">Emergency / after-hours support available by arrangement</div>
+      </div>
+
+      <footer>
+        <div><strong>EdgeWave IT Services</strong> • PC repair • Networks • Web & Software • Automation</div>
+      </footer>
+    </aside>
+  </div>
+</body>
+</html>
