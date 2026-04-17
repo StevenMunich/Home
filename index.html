@@ -39,7 +39,64 @@
 		<nav id="navbar"></nav>
 	</div>
 
-<!--End of Nav, Can put more here, A blank Body basically. 
+
+	
+<!--End of Nav--> 
+
+<img id="satty" src="satty.png" style="
+  position:absolute;
+  width:40px;
+  height:40px;
+  transform:translate(-50%, -50%);
+  pointer-events:none;
+">
+
+<script>
+  const sprite = document.getElementById("satty");
+
+  // Center of the screen
+  function center() {
+    return {
+      x: window.innerWidth / 2,
+      y: window.innerHeight / 2
+    };
+  }
+
+  let { x: cx, y: cy } = center();
+
+  // Spiral parameters
+  let theta = 0;
+  const dTheta = 0.05; // speed
+  const b = 3;         // spiral looseness
+
+  function animate() {
+    theta += dTheta;
+    const r = b * theta;
+
+    const x = cx + r * Math.cos(theta);
+    const y = cy + r * Math.sin(theta);
+
+    sprite.style.left = x + "px";
+    sprite.style.top = y + "px";
+
+    // Reset when far off-screen
+    if (r > Math.max(window.innerWidth, window.innerHeight)) {
+      theta = 0;
+      ({ x: cx, y: cy } = center());
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  // Re-center on resize
+  window.addEventListener("resize", () => {
+    ({ x: cx, y: cy } = center());
+  });
+
+  animate();
+</script>
+	
+<!--End of Body, Can put more here, A blank Body basically. 
 	PC repairs, software, website services, networking serivces, csecurity camera setup, All that. 
 	EVERYTHING YOU KNOW YOU CAN DO NEEDS TO BE OUT THERE in a manner CUSTOMERS can relate and read to. 
 	
