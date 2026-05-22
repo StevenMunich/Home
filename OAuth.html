@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Sign-In Test</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+<h2>Google Sign-In</h2>
+
+<div id="g_id_onload"
+     data-client_id="66374976242-javo62psf3v0ikaalbidqhu6i1v2edmr.apps.googleusercontent.com"
+     data-callback="handleCredentialResponse">
+</div>
+
+<div class="g_id_signin" data-type="standard"></div>
+
+<script>
+function handleCredentialResponse(response) {
+    console.log("ID Token:", response.credential);
+
+    fetch("https://YOUR-FLASK-URL/verify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ credential: response.credential })
+    })
+    .then(r => r.json())
+    .then(data => console.log("Backend:", data));
+}
+</script>
+
+</body>
+</html>
