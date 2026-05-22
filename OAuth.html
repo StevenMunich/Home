@@ -19,7 +19,7 @@
 function handleCredentialResponse(response) {
     console.log("ID Token:", response.credential);
 
-    fetch("https://YOUR-FLASK-URL/verify", {
+    fetch("https://BACK-END-ADRESS-FOR-FLASK/verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ credential: response.credential })
