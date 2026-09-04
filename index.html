@@ -38,7 +38,13 @@
 		
 		<nav id="navbar"></nav>
 	</div>
-
+	<script>
+		fetch("navbar.html")
+		  .then(response => response.text())
+		  .then(data => {
+		      document.getElementById("navbar").innerHTML = data;
+		  });
+	</script>
 
 	
 <!--End of Nav--> 
@@ -131,13 +137,7 @@
 
 <!--Footer Script-->
 		
-	<script>
-		fetch("navbar.html")
-		  .then(response => response.text())
-		  .then(data => {
-		      document.getElementById("navbar").innerHTML = data;
-		  });
-	</script>
+	
 	
 </body>
 </html>
