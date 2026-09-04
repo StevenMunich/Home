@@ -6,10 +6,26 @@
 		
 
             <script>
-                function func1(){
-                    window.close(); //for anyu future monkey business
-                }
-            </script>
+(function() {
+    const correctPassword = "respect";
+
+    // Ask user for password
+    const userInput = prompt("Enter password to continue:");
+
+    // If wrong, redirect back to where they came from
+    if (userInput !== correctPassword) {
+        const back = document.referrer;
+
+        if (back) {
+            window.location.href = back;
+        } else {
+            // fallback if no referrer exists
+            window.location.href = "https://www.stevenmunich.com";
+        }
+    }
+})();
+</script>
+
 
 
 		<style>
