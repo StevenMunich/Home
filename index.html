@@ -36,29 +36,87 @@
 		</span>
 
 		
-		<nav>
-		<ul>	
-			<li><a href="https://stevenmunich.github.io/stats/"/>Statistics Calculator</a></li>				
-			<li><a href="https://stevenmunich.github.io/AutoClicker/">AutoClicker</a></li>
-			<li><a href="https://stevenmunich.github.io/Preventyl/">Preventyl App</a></li>
-			<li><a href="https://stevenmunich.github.io/binary/">Convert name into binary</a></li>
-			<!--Get a better template <li><a href="https://stevenmunich.github.io/BobsBar/index.html">Template Site for resturants</a></li>-->
-			<li><a href="documents/index.html">Library</a></li>
-			<li><a href="https://stevenmunich.github.io/Frogger/">Frogger</a></li>
-			<li><a href="https://stevenmunich.github.io/JScamRecorder/"</a>Cam Recorder</li>
-			<li><a href="Flyer/contact.html">Contact Us</a></li>
-			
-			<br>
-			
-		</ul>
-		</nav>
+		<nav id="navbar"></nav>
 	</div>
-
-	
 	
 
 	
+<!--End of Nav--> 
+
+
+
+<img id="satty" src="angel.gif" style="
+  position:absolute;
+  width:60px;
+  height:60px;
+  transform:translate(-50%, -50%);
+  pointer-events:none;
+">
+
+<script>
+  const sprite = document.getElementById("satty");
+
+  // Center of the screen
+  function center() {
+    return {
+      x: window.innerWidth / 2,
+      y: window.innerHeight / 2
+    };
+  }
+
+  let { x: cx, y: cy } = center();
+
+  // Spiral parameters
+  let theta = 0;
+  const dTheta = 0.05; // speed
+  const b = 3;         // spiral looseness
+
+  function animate() {
+    theta += dTheta;
+    const r = b * theta;
+
+    const x = cx + r * Math.cos(theta);
+    const y = cy + r * Math.sin(theta);
+
+    sprite.style.left = x + "px";
+    sprite.style.top = y + "px";
+
+    // Reset when far off-screen
+    if (r > Math.max(window.innerWidth, window.innerHeight)) {
+      theta = 0;
+      ({ x: cx, y: cy } = center());
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  // Re-center on resize
+  window.addEventListener("resize", () => {
+    ({ x: cx, y: cy } = center());
+  });
+
+  animate();
+</script>
 	
+<!--End of Body, Can put more here, A blank Body basically. 
+	PC repairs, software, website services, networking serivces, csecurity camera setup, All that. 
+	EVERYTHING YOU KNOW YOU CAN DO NEEDS TO BE OUT THERE in a manner CUSTOMERS can relate and read to. 
+	
+	You know how to make it easy, how to make working on a computer easier for YOU. LISTEN TO THEM. You love computers SO MUCH its easy to get your head up your ass. PAY ATTENTION TO THEIR NEEDS. 
+	No matter how bad ass you make someone's computer, always say you have too many as it is the truth. 
+	You have to say that now and do something with the 2GB machines, put linux on those ASAP(to sell) or run as a textbased servers. 
+	Windows might be easier to setup an email/http server, this is MUCH CHEAPER and can recycle computers. Win7 can still work. Do the one with certificate with windows and other with mint.
+
+	LISTEN TO THE CUSTOMER AT ALL COST, with your HEART. But hold back all action until your brain knows EXACTLY what they want, then take a break and make a plan.
+	DO NOT QUIT, That is the planning phase, you just got glipse into what their vision is. So prepare to make it live for them.
+	
+	Know what they want is the #1 most important thing as it prevents re-design and worse, new requirements. If its imposssible, unfeasable, tell them but also think outside the box to solve their problem.
+	EVERYTHING IS SOCIO--TECHNICAL, people will use them, need help, need PROBLEMS SOLVED.
+	
+	IF YOU FIND A FREE Back-end hosting SERVICE, use it!. You have set up chat servers at hom inside networks. You can advertise those too.-->
+
+	
+	<!--Footer-->
 
 	<div id="center">
 		<div id="game-area" tabindex="0">
@@ -70,6 +128,16 @@
 				<img height="180"  width="200" src="images/bern.png">
 			</a>
 	</div>	
+
+<!--Footer Script-->
+		<script>
+		fetch("navbar.html")
+		  .then(response => response.text())
+		  .then(data => {
+		      document.getElementById("navbar").innerHTML = data;
+		  });
+	</script>
+	
 	
 </body>
 </html>
